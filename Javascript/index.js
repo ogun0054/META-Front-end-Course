@@ -244,3 +244,57 @@ counter += 3;
 console.log(counter);
 
 console.log("Number " + 8);
+
+//Additional Resources
+
+//Addition (+)
+/*
+The + operation is overloaded foe two distinct operations:
+1- numeric addition
+2- string concatenation
+ */
+
+//BigInt
+
+let bigIntNum = 9007199254740991n;
+let stringVar = 20;
+
+// console.log(bigIntNum + stringVar);
+
+/*conditional
+if statement
+if else statement
+switch statement
+*/
+
+//If else condition Example
+
+// let studentName = prompt("What is your name?");
+// let result = prompt("What is your scoreSherif");
+
+// if (result > 40) {
+//   let testResult = `${studentName}!,Congratulations, you pass the test.`;
+//   console.log(testResult);
+// } else {
+//   console.log(`${studentName}!, You need to try next time.`);
+// }
+
+let visitingPlace = prompt(
+  "what's your favorite place to visit soon? \n Choose from the following (Makkah, Medina, Aqsa, London, Canada, USA)"
+);
+
+if (visitingPlace == "Makkah") {
+  console.log("Nice, probably you are going for Umrah or Hajj.");
+} else if (visitingPlace == "Medina") {
+  console.log("Cole!, you are going to visit the prophet's Masjid.");
+} else if (visitingPlace == "Aqsa") {
+  console.log("You are traveling to Masjidul-Aqsa");
+} else if (visitingPlace == "London") {
+  console.log("You are visiting your family");
+} else if (visitingPlace == "Canada") {
+  console.log("You are going fo studies");
+} else if (visitingPlace == "USA") {
+  console.log("You won a Scholarship.");
+} else {
+  console.log("You are not traveling");
+}
