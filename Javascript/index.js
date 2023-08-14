@@ -283,18 +283,45 @@ let visitingPlace = prompt(
   "what's your favorite place to visit soon? \n Choose from the following (Makkah, Medina, Aqsa, London, Canada, USA)"
 );
 
-if (visitingPlace == "Makkah") {
-  console.log("Nice, probably you are going for Umrah or Hajj.");
-} else if (visitingPlace == "Medina") {
-  console.log("Cole!, you are going to visit the prophet's Masjid.");
-} else if (visitingPlace == "Aqsa") {
-  console.log("You are traveling to Masjidul-Aqsa");
-} else if (visitingPlace == "London") {
-  console.log("You are visiting your family");
-} else if (visitingPlace == "Canada") {
-  console.log("You are going fo studies");
-} else if (visitingPlace == "USA") {
-  console.log("You won a Scholarship.");
-} else {
-  console.log("You are not traveling");
+// If statement
+
+// if (visitingPlace == "Makkah") {
+//   console.log("Nice, probably you are going for Umrah or Hajj.");
+// } else if (visitingPlace == "Medina") {
+//   console.log("Cole!, you are going to visit the prophet's Masjid.");
+// } else if (visitingPlace == "Aqsa") {
+//   console.log("You are traveling to Masjidul-Aqsa");
+// } else if (visitingPlace == "London") {
+//   console.log("You are visiting your family");
+// } else if (visitingPlace == "Canada") {
+//   console.log("You are going fo studies");
+// } else if (visitingPlace == "USA") {
+//   console.log("You won a Scholarship.");
+// } else {
+//   console.log("You are not traveling");
+// }
+
+// Switch
+
+switch (visitingPlace) {
+  case "Makkah":
+    console.log("Nice, probably you are going for Umrah or Hajj.");
+    break;
+  case "Medina":
+    console.log("Cole!, you are going to visit the prophet's Masjid.");
+    break;
+  case "Aqsa":
+    console.log("You are traveling to Masjidul-Aqsa");
+    break;
+  case "London":
+    console.log("You are visiting your family");
+    break;
+  case "Canada":
+    console.log("You are going fo studies");
+    break;
+  case "USA":
+    console.log("You won a Scholarship.");
+    break;
+  default:
+    console.log("You are not traveling");
 }
