@@ -279,9 +279,9 @@ switch statement
 //   console.log(`${studentName}!, You need to try next time.`);
 // }
 
-let visitingPlace = prompt(
-  "what's your favorite place to visit soon? \n Choose from the following (Makkah, Medina, Aqsa, London, Canada, USA)"
-);
+// let visitingPlace = prompt(
+//   "what's your favorite place to visit soon? \n Choose from the following (Makkah, Medina, Aqsa, London, Canada, USA)"
+// );
 
 // If statement
 
@@ -303,25 +303,148 @@ let visitingPlace = prompt(
 
 // Switch
 
-switch (visitingPlace) {
-  case "Makkah":
-    console.log("Nice, probably you are going for Umrah or Hajj.");
-    break;
-  case "Medina":
-    console.log("Cole!, you are going to visit the prophet's Masjid.");
-    break;
-  case "Aqsa":
-    console.log("You are traveling to Masjidul-Aqsa");
-    break;
-  case "London":
-    console.log("You are visiting your family");
-    break;
-  case "Canada":
-    console.log("You are going fo studies");
-    break;
-  case "USA":
-    console.log("You won a Scholarship.");
-    break;
-  default:
-    console.log("You are not traveling");
+//switch (visitingPlace) {
+//   case "Makkah":
+//     console.log("Nice, probably you are going for Umrah or Hajj.");
+//     break;
+//   case "Medina":
+//     console.log("Cole!, you are going to visit the prophet's Masjid.");
+//     break;
+//   case "Aqsa":
+//     console.log("You are traveling to Masjidul-Aqsa");
+//     break;
+//   case "London":
+//     console.log("You are visiting your family");
+//     break;
+//   case "Canada":
+//     console.log("You are going fo studies");
+//     break;
+//   case "USA":
+//     console.log("You won a Scholarship.");
+//     break;
+//   default:
+//     console.log("You are not traveling");
+// }
+
+// Loop
+/*
+Types of loop in Javascript
+1. For
+2. While
+3. Nested
+*/
+
+// For loop
+for (let i = 0; i < 5; i++) {
+  console.log(i);
 }
+
+//While Loop
+let i = 1;
+while (i < 4) {
+  i++;
+  console.log(i);
+}
+
+console.log("///////////////");
+for (let i = 10; i > 3; i--) {
+  console.log(i);
+}
+console.log("Happy life!");
+
+/*
+// Loop Examples
+1.Task 1
+Write a "for" loop that will perform exactly the same repetitive code as this:
+console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+console.log(5)
+console.log('Counting completed!')
+ */
+// Solution
+
+for (let i = 1; i < 6; i++) {
+  console.log(i);
+}
+console.log("Counting completed!");
+
+/*
+Task 2 
+Write a "for" loop that will perform exactly the same repetitive code as this:
+
+console.log(5)
+console.log(4)
+console.log(3)
+console.log(2)
+console.log(1)
+console.log('Countdown finished!')
+ */
+
+// Solution
+
+for (let i = 5; i > 0; i--) {
+  console.log(i);
+}
+console.log("Counting finished!");
+
+/*
+Task 3
+Write a "while" loop that will perform exactly the same repetitive code as this:
+// console.log(1)
+// console.log(2)
+// console.log(3)
+// console.log(4)
+// console.log(5)
+// console.log('Counting completed!')
+ */
+
+// Solution
+
+let i = 1;
+while (i < 6) {
+  console.log(i);
+  i++;
+}
+console.log("Counting completed!");
+
+/*
+Task 4
+Write a "while" loop that will perform exactly the same repetitive code as this:
+console.log(5)
+console.log(4)
+console.log(3)
+console.log(2)
+console.log(1)
+console.log('Countdown finished!')
+ */
+
+// Solution
+
+let j = 5;
+while (j > 0) {
+  console.log(j);
+  i--;
+}
+console.log("Countdown finished!");
+
+/*
+Task 5
+Write a "while" loop that will perform exactly the same repetitive code as this:
+console.log(2018)
+console.log(2019)
+console.log(2020)
+console.log(2021)
+console.log(2022)
+ */
+
+//Solution
+
+let year = 2018;
+while (year < 2023) {
+  console.log(year);
+  i++;
+}
+
+//Nested Loop
