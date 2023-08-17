@@ -402,10 +402,10 @@ Write a "while" loop that will perform exactly the same repetitive code as this:
 
 // Solution
 
-let i = 1;
-while (i < 6) {
+let f = 1;
+while (f < 6) {
   console.log(i);
-  i++;
+  f++;
 }
 console.log("Counting completed!");
 
@@ -425,7 +425,7 @@ console.log('Countdown finished!')
 let j = 5;
 while (j > 0) {
   console.log(j);
-  i--;
+  j--;
 }
 console.log("Countdown finished!");
 
@@ -444,7 +444,35 @@ console.log(2022)
 let year = 2018;
 while (year < 2023) {
   console.log(year);
-  i++;
+  year++;
 }
 
 //Nested Loop
+// Single loop
+// for (let firstNum = 0; firstNum < 2; firstNum++) {
+//   for (let secondNum = 0; secondNum < 10; secondNum++) {
+//     console.log(firstNum + " , " + secondNum);
+//   }
+// }
+
+//single loop
+// for (let secondNum = 0; secondNum < 10; secondNum++) {
+//   console.log(secondNum);
+// }
+
+//nested loops - one inside another
+for (let firstNum = 0; firstNum < 2; firstNum++) {
+  for (let secondNum = 0; secondNum < 10; secondNum++) {
+    console.log(
+      firstNum + " time " + secondNum + " equals " + firstNum * secondNum
+    );
+  }
+}
+
+//nested loops - one inside another
+console.log("-----------------------Divide------------------");
+// for (let d = 100; d > 10; d -= 10) {
+//   for (let f = 10; f > 4; f = d - 5) {
+//     console.log(d + " divided by " + j + " equals " + d / f);
+//   }
+// }
