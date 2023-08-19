@@ -30,7 +30,7 @@ let multiple = 16 * 4;
 
 let module = 9 % 2;
 
-console.log(" Arithmetic Operations " + addition, sub, div, multiple, module);
+// console.log(" Arithmetic Operations " + addition, sub, div, multiple, module);
 
 /*
  Comparison Operators
@@ -49,7 +49,7 @@ let less = 5 < 10;
 let equal = 50 == 50;
 let notEqual = 50 != 60;
 
-console.log("Comparison Operators   " + greater, less, equal, notEqual);
+// console.log("Comparison Operators   " + greater, less, equal, notEqual);
 
 /*
 Logical Operators
@@ -75,7 +75,7 @@ String: Strings are used to represent and work with
  */
 
 let greeting = "Hello \n there!";
-console.log(greeting);
+// console.log(greeting);
 
 /*
 Boolean: The Boolean data type is used to check if a statement is true or false.
@@ -90,7 +90,7 @@ let timeNow = Date.now();
 console.log(timeNow);
 
 let currentTime = 15;
-console.log(currentTime > 12 && currentTime < 17);
+// console.log(currentTime > 12 && currentTime < 17);
 
 // Challenge
 
@@ -110,7 +110,7 @@ The expected output in the console should be: "Mid-level skills: true".
 
 // Solution
 let score = 8;
-console.log("Mid-level-skills:" + !(score < 0 && score < 10));
+// console.log("Mid-level-skills:" + !(score < 0 && score < 10));
 
 /*
 /////////////////////////////////////////////////
@@ -138,7 +138,7 @@ Note that the expected output in the console should be: "Game over: true".
 
 let timeRemaining = 0;
 let energy = 10;
-console.log("Game over : " + (timeRemaining == 0 || energy == 0));
+// console.log("Game over : " + (timeRemaining == 0 || energy == 0));
 
 /*
 ////////////////////////////////////////////////////////////////////////////////
@@ -182,8 +182,8 @@ let test2 = num2 % 2;
 let result1 = test1 == 0;
 let result2 = test2 == 0;
 
-console.log("Is ", num1, "an even number?", result1);
-console.log("Is ", num2, "an even number?", result2);
+// console.log("Is ", num1, "an even number?", result1);
+// console.log("Is ", num2, "an even number?", result2);
 
 /*
 /////////////////////////////////////////////////////////
@@ -196,7 +196,7 @@ Note: This task should be completed on a single line of code. The output in the 
 */
 
 // Solution
-console.log(5 + 10);
+// console.log(5 + 10);
 
 /*
 ////////////////////////////////////////////////////////////////////
@@ -219,7 +219,7 @@ Note: The expected output should be: "Now in 3D!".
 let now = "Now in ";
 let three = 3;
 let d = "D!";
-console.log(now + three + d);
+// console.log(now + three + d);
 
 /*
 ///////////////////////////////////////////////////////////////////////////////
@@ -241,9 +241,9 @@ Note: The output value should be 8.
 let counter = 0;
 counter += 5;
 counter += 3;
-console.log(counter);
+// console.log(counter);
 
-console.log("Number " + 8);
+// console.log("Number " + 8);
 
 //Additional Resources
 
@@ -335,22 +335,22 @@ Types of loop in Javascript
 */
 
 // For loop
-for (let i = 0; i < 5; i++) {
-  console.log(i);
-}
+// for (let i = 0; i < 5; i++) {
+//   console.log(i);
+// }
 
 //While Loop
-let i = 1;
-while (i < 4) {
-  i++;
-  console.log(i);
-}
+// let i = 1;
+// while (i < 4) {
+//   i++;
+//   console.log(i);
+// }
 
-console.log("///////////////");
-for (let i = 10; i > 3; i--) {
-  console.log(i);
-}
-console.log("Happy life!");
+// console.log("///////////////");
+// for (let i = 10; i > 3; i--) {
+//   console.log(i);
+// }
+// console.log("Happy life!");
 
 /*
 // Loop Examples
@@ -365,10 +365,10 @@ console.log('Counting completed!')
  */
 // Solution
 
-for (let i = 1; i < 6; i++) {
-  console.log(i);
-}
-console.log("Counting completed!");
+// for (let i = 1; i < 6; i++) {
+//   console.log(i);
+// }
+// console.log("Counting completed!");
 
 /*
 Task 2 
@@ -384,10 +384,10 @@ console.log('Countdown finished!')
 
 // Solution
 
-for (let i = 5; i > 0; i--) {
-  console.log(i);
-}
-console.log("Counting finished!");
+// for (let i = 5; i > 0; i--) {
+//   console.log(i);
+// }
+// console.log("Counting finished!");
 
 /*
 Task 3
@@ -402,12 +402,12 @@ Write a "while" loop that will perform exactly the same repetitive code as this:
 
 // Solution
 
-let f = 1;
-while (f < 6) {
-  console.log(i);
-  f++;
-}
-console.log("Counting completed!");
+// let f = 1;
+// while (f < 6) {
+//   console.log(i);
+//   f++;
+// }
+// console.log("Counting completed!");
 
 /*
 Task 4
@@ -422,12 +422,12 @@ console.log('Countdown finished!')
 
 // Solution
 
-let j = 5;
-while (j > 0) {
-  console.log(j);
-  j--;
-}
-console.log("Countdown finished!");
+// let j = 5;
+// while (j > 0) {
+//   console.log(j);
+//   j--;
+// }
+// console.log("Countdown finished!");
 
 /*
 Task 5
@@ -441,11 +441,11 @@ console.log(2022)
 
 //Solution
 
-let year = 2018;
-while (year < 2023) {
-  console.log(year);
-  year++;
-}
+// let year = 2018;
+// while (year < 2023) {
+//   console.log(year);
+//   year++;
+// }
 
 //Nested Loop
 // Single loop
@@ -461,18 +461,115 @@ while (year < 2023) {
 // }
 
 //nested loops - one inside another
-for (let firstNum = 0; firstNum < 2; firstNum++) {
-  for (let secondNum = 0; secondNum < 10; secondNum++) {
-    console.log(
-      firstNum + " time " + secondNum + " equals " + firstNum * secondNum
-    );
-  }
-}
+// for (let firstNum = 0; firstNum < 2; firstNum++) {
+//   for (let secondNum = 0; secondNum < 10; secondNum++) {
+//     console.log(
+//       firstNum + " time " + secondNum + " equals " + firstNum * secondNum
+//     );
+//   }
+// }
 
 //nested loops - one inside another
-console.log("-----------------------Divide------------------");
+// console.log("-----------------------Divide------------------");
 // for (let d = 100; d > 10; d -= 10) {
 //   for (let f = 10; f > 4; f = d - 5) {
 //     console.log(d + " divided by " + j + " equals " + d / f);
 //   }
 // }
+// for (i = 0; i < 2; i++) {
+//   console.log("Hello");
+// }
+
+// var x = 0;
+// while (x < 3) {
+//   console.log("Hello");
+//   x++;
+// }
+
+// for (x = 0; x < 2; x++) {
+//   for (var y = 0; y < 3; y++) {
+//     console.log("Hello");
+//   }
+// }
+
+// let x = 7;
+// if (x <= 5) {
+//   console.log("Hello");
+// } else if (x <= 10) {
+//   console.log("Goodnight");
+// } else {
+//   console.log("Goodbye");
+// }
+
+let x = 3;
+
+// switch (x) {
+//   case 1:
+//     console.log("Hello");
+//     break;
+//   case 2:
+//     console.log("Goodnight");
+//     break;
+//   case 3:
+//     console.log("Goodbye");
+//     break;
+// }
+
+// if (x == 2 || x == 3) {
+//   console.log("Hello");
+// } else {
+//   console.log("Goodbye");
+// }
+
+// try {
+//   console.log("hello);
+// } catch (e) {
+//   console.log("caught");
+// }
+
+// var burger = ["bun", "beef", "lettuce", "tomato sauce", "onion", "bun"];
+// console.log(burger[2]);
+
+// try {
+//   throw new Error();
+//   console.log("Hello");
+// } catch (err) {
+//   console.log("Goodbye");
+// }
+
+// function add(a, b) {
+//   console.log(a + b);
+// }
+
+// add(3, "4");
+
+// var str = "Hello";
+// console.log(str.match("jello"));
+
+// try {
+//   Number(5).toPrecision(300);
+// } catch (e) {
+//   console.log("There was an error");
+// }
+
+// function
+
+//Array
+/*
+Array 
+* Values in an array are all part of a group
+* Values are set in a specific sequence
+* Values can be accessed with their index numbers
+
+ */
+
+let items = Array.from("hhhhhhhhhhhhhhhyutunbxncgjs");
+function listArrayItems(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+
+listArrayItems(items);
+
+console.log(items.length);
