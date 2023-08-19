@@ -563,13 +563,17 @@ Array
 
  */
 
-let items = Array.from("hhhhhhhhhhhhhhhyutunbxncgjs");
+let items = ["red", "orange", "yellow", "green", "blue", "purple", "pink"];
 function listArrayItems(arr) {
   for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
+    if (arr[i] == "red") {
+      console.log(i * 100, "tomato!");
+    } else {
+      console.log(i * 100, arr[i]);
+    }
   }
 }
 
 listArrayItems(items);
 
-console.log(items.length);
+// console.log(items.length);
