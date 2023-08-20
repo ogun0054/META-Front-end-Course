@@ -636,3 +636,18 @@ Return the minimum and maximum values of all the inputs: Math.min(9,8,7) returns
 
  Trigonometric methods: Math.sin(), Math.cos(), Math.tan(), etc.
  */
+
+//Math.random()
+
+// Generate a decimal number between 0 and 0.99
+let randomNum = Math.random();
+console.log(randomNum);
+console.log(randomNum * 100);
+
+// Ceil Method
+/*
+A part of the Math object rounds a decimal up to the nearest integer.
+ */
+
+let rounded = Math.ceil(2.99);
+console.log(rounded);
