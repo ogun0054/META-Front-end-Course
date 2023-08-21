@@ -82,12 +82,12 @@ Boolean: The Boolean data type is used to check if a statement is true or false.
  */
 
 let gre = 1 < 2;
-console.log(gre);
+// console.log(gre);
 
 // AND Operator
 
 let timeNow = Date.now();
-console.log(timeNow);
+// console.log(timeNow);
 
 let currentTime = 15;
 // console.log(currentTime > 12 && currentTime < 17);
@@ -664,7 +664,47 @@ let rounded = Math.ceil(2.99);
 
 let longestWord = "Pneumonoultramicroscopicsilicovolcanoconiosis";
 
-console.log(longestWord.length);
+// console.log(longestWord.length);
 for (let i = 0; i < longestWord.length; i++) {
-  console.log(longestWord[i]);
+  // console.log(longestWord[i]);
 }
+
+//String Cheat Sheet
+
+let greet = "Hello, ";
+let place = "World";
+
+//1 .length()
+console.log(greet.length);
+
+//2 .charAt()
+
+console.log(greet.charAt(0));
+
+//3 .concat()
+let worldConcat = "Wo";
+worldConcat = worldConcat.concat("rl").concat("d");
+console.log(worldConcat);
+
+//4 indexOf
+
+console.log(greet.indexOf("l"));
+
+//5 lastIndexOf
+
+//6 Split
+
+let splitStr = "b-o-o-k";
+
+console.log(splitStr.split("-"));
+console.log(splitStr.split("-").length);
+
+//7 toUpperCase()
+
+console.log(greet.toUpperCase());
+
+//8. toLowerCase()
+
+let myCountry = "NIGERIA";
+
+console.log(myCountry.toLocaleLowerCase());
