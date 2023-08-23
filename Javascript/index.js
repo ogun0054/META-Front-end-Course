@@ -675,20 +675,20 @@ let greet = "Hello, ";
 let place = "World";
 
 //1 .length()
-console.log(greet.length);
+// console.log(greet.length);
 
 //2 .charAt()
 
-console.log(greet.charAt(0));
+// console.log(greet.charAt(0));
 
 //3 .concat()
 let worldConcat = "Wo";
 worldConcat = worldConcat.concat("rl").concat("d");
-console.log(worldConcat);
+// console.log(worldConcat);
 
 //4 indexOf
 
-console.log(greet.indexOf("l"));
+// console.log(greet.indexOf("l"));
 
 //5 lastIndexOf
 
@@ -696,15 +696,250 @@ console.log(greet.indexOf("l"));
 
 let splitStr = "b-o-o-k";
 
-console.log(splitStr.split("-"));
-console.log(splitStr.split("-").length);
+// console.log(splitStr.split("-"));
+// console.log(splitStr.split("-").length);
 
 //7 toUpperCase()
 
-console.log(greet.toUpperCase());
+// console.log(greet.toUpperCase());
 
 //8. toLowerCase()
 
 let myCountry = "NIGERIA";
 
-console.log(myCountry.toLocaleLowerCase());
+// console.log(myCountry.toLocaleLowerCase());
+
+// Oject Methods
+
+// Add new object
+
+// let car = {};
+// car.color = "red";
+
+// Adding a method to the car object so that it can be called car.turnKey()
+// If the function is a property of an object, it is then referred to as a method.
+
+let car = {};
+car.mileage = 98765;
+car.color = "red";
+// console.log(car);
+
+car.turnKey = function () {
+  // console.log("engine running");
+};
+
+car.lightsOn = function () {
+  // console.log("The lights are on.");
+};
+
+// console.log(car);
+// console.log(car.turnKey);
+// car.lightsOn();
+
+// Typeof Operator
+/*
+he type of operator accepts and evaluates a parameter
+and returns the name of the data type represented as a string
+ */
+// Examples
+
+// let test = typeof "What is This";
+// console.log(test);
+// let test = typeof 10;
+// console.log(test);
+// let test = typeof 3.14;
+// console.log(test);
+// let test = typeof true;
+// console.log(test);
+// let test = typeof false;
+// console.log(test);
+// let test = typeof (1 < 2);
+// console.log(test);
+// let test = typeof [1, 2, 3];
+// console.log(test);
+// let test = typeof ({firstName: 1});
+// console.log(test);
+let test = typeof function abc() {
+  // console.log("abc");
+};
+// console.log(test);
+
+// Type of Errors in JavaScript
+//Type, syntax, reference error.
+
+//Error Handling : pro , try , catch.
+
+// try {
+//   console.log(c + d);
+// } catch (err) {}
+
+// try {
+//   throw new Error();
+// } catch (err) {
+//   console.log(err);
+// }
+
+// console.log(a + b);
+// console.log("This line is never reached");
+
+// throw new ReferenceError();
+
+// try {
+//   console.log(a + d);
+//   throw new ReferenceError();
+// } catch (err) {
+//   console.log(err);
+//   console.log("There was an error");
+//   // console.log("The error was saved in the error log");
+// }
+
+// console.log("My program does not stop");
+
+// Syntax, logical and runtime errors
+
+/*
+Here are some of the most common errors in JavaScript: 
+
+ReferenceError 
+
+SyntaxError 
+
+TypeError 
+
+RangeError
+
+There are some other errors in JavaScript. These other errors include: 
+
+AggregateError 
+
+Error 
+
+InternalError 
+
+URIError
+ */
+
+// let letters = "abc";
+
+// console.log(letters.match(/d/));
+
+/*
+Exercise: Error prevention
+Instructions
+Task 1: Code a function declaration
+You need to code a function declaration named addTwoNums, which accepts numbers a and b and console logs a + b.
+
+Task 2: Invoke the addTwoNums function with a number and a string
+You need to invoke the addTwoNums using the following arguments: 5 and "5".
+
+Task 3: Update the addTwoNums function with a try...catch block
+Add the try and catch blocks inside the function definition's body. For now, just make sure that the console log of a + b is inside the try block. Additionally, the catch block should catch an error named err and, inside the body of the catch block, you need to console log the err value.
+
+Task 4: If the passed-in arguments are not numbers, throw an error
+If either of the arguments passed to the addTwoNums are not numbers, you'll throw an error.
+
+Specifically, code a conditional with the following logic:
+
+if the typeof the a parameter is not equal to 'number', throw a new ReferenceError. Inside the ReferenceError, pass a custom error message of 'the first argument is not a number'.
+
+else if the typeof the b parameter is not equal to 'number', throw a new ReferenceError. Inside the ReferenceError, pass a custom error message of 'the second argument is not a number'.
+
+else, console log a + b  
+
+Once you've completed this task, all the code inside the try block will be inside these conditional statements.
+
+Task 5: Update the catch block
+Inside the catch block, update the code from console.log(err) to console.log("Error!", err).
+
+Task 6: Invoke the addTwoNums function
+Invoke the addTwoNums function using 5 and "5" as arguments.
+
+Task 7: Add another console log under the addTwoNums function invocation
+Add another line of code that console logs the string "It still works".
+
+
+*/
+
+// function addTwoNums(a, b) {
+//   try {
+//     if (typeof a != "number") {
+//       throw new ReferenceError("the first argument is not a number");
+//     } else if (typeof b != "number") {
+//       throw new ReferenceError("the second argument is not a number");
+//     } else {
+//       console.log(a + b);
+//     }
+//   } catch (err) {
+//     console.log("Error!", err);
+//   }
+// }
+// addTwoNums(5, "5");
+// console.log("It still works");
+
+//Solution: Defensive programming
+
+function letterFinder(word, match) {
+  var condition1 = typeof word == "string" && word.length >= 2; //if the word is a string and the length is greater than or equal to 2
+  var condition2 = typeof match == "string" && match.length == 1; //if the match is a string and the length is equal to 1
+  if (condition1 && condition2) {
+    //if both condition matches
+    for (var i = 0; i < word.length; i++) {
+      if (word[i] == match) {
+        //check if the character at this i position in the word is equal to the match
+        console.log("Found the", match, "at", i);
+      } else {
+        console.log("---No match found at", i);
+      }
+    }
+  } else {
+    //if the requirements don't match
+    console.log("Please pass correct arguments to the function");
+  }
+}
+// letterFinder([], []);
+// letterFinder("cat", "c");
+
+// Objective-Oriented programming
+// Revision on Functional Programming
+// Calculating shoe price
+let shoes = 100;
+let stateTax = 1.2;
+
+function totalPrice(shoes, tax) {
+  return shoes * tax;
+}
+
+// console.log(totalPrice(shoes, stateTax));
+
+// Objective-Oriented programming version
+
+let purchase1 = {
+  shoes: 120,
+  stateTax: 1.2,
+  totalPrice: function () {
+    return purchase1.shoes * purchase1.stateTax;
+  },
+};
+
+console.log(purchase1.totalPrice());
+
+// let purchase2 = {
+//   shoes: 150,
+//   stateTax: 1.2,
+//   totalPrice: function () {
+//     return purchase2.shoes * purchase2.stateTax;
+//   },
+// };
+
+// console.log(purchase2.totalPrice());
+
+// this keyword
+let purchase2 = {
+  shoes: 150,
+  stateTax: 1.2,
+  totalPrice: function () {
+    return this.shoes * this.stateTax;
+  },
+};
+
+console.log(purchase2.totalPrice());
