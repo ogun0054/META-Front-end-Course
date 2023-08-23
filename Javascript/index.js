@@ -943,3 +943,50 @@ let purchase2 = {
 };
 
 console.log(purchase2.totalPrice());
+
+// Classes in JavaScript
+// Syntax
+
+class Car {
+  constructor(color, speed) {
+    this.color = color;
+    this.speed = speed;
+  }
+}
+
+/*
+The Principles of OOP
+-The four fundamental OOP principles are
+- inheritance
+- encapsulation
+- abstraction
+- polymorphism
+
+/////////////////////////////
+OOP Principles: Inheritance
+Inheritance is one of the foundations of object-oriented programming.
+
+In essence, it's a very simple concept. It works like this: 
+
+There is a base class of a "thing".
+
+There is one or more sub-classes of "things" that inherit the properties of the base class (sometimes also referred to as the "super-class")
+
+There might be some other sub-sub-classes of "things" that inherit from those classes in point 2.
+
+Note that each sub-class inherits from its super-class. In turn, a sub-class might also be a super-class, if there are classes inheriting from that sub-class.
+
+All of this might sound a bit "computer-science", so here's a more practical example:
+
+There is a base class of "Animal".
+
+There is another class, a sub-class inheriting from "Animal", and the name of this class is "Bird".
+
+Next, there is another class, inheriting from "Bird", and this class is "Eagle".
+
+Thus, in the above example, I'm modelling objects from the real world by constructing relationships between Animal, Bird, and Eagle. Each of them are separate classes, meaning, each of them are separate blueprints for specific object instances that can be constructed as needed.
+
+To setup the inheritance relation between classes in JavaScript, I can use the extends keyword, as in class B extends A.
+
+
+*/
