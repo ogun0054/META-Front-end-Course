@@ -921,13 +921,14 @@ let purchase1 = {
   },
 };
 
-console.log(purchase1.totalPrice());
+// console.log(purchase1.totalPrice());
 
 // let purchase2 = {
-//   shoes: 150,
+//   shoes: 100,
 //   stateTax: 1.2,
 //   totalPrice: function () {
-//     return purchase2.shoes * purchase2.stateTax;
+//     return (calculation = purchase2.shoes * purchase2.stateTax);
+//     console.log("Total price:", calculation);
 //   },
 // };
 
@@ -935,10 +936,11 @@ console.log(purchase1.totalPrice());
 
 // this keyword
 let purchase2 = {
-  shoes: 150,
+  shoes: 50,
   stateTax: 1.2,
   totalPrice: function () {
-    return this.shoes * this.stateTax;
+    return (calculation = this.shoes * this.stateTax);
+    console.log("Total price:", calculation);
   },
 };
 
@@ -952,7 +954,14 @@ class Car {
     this.color = color;
     this.speed = speed;
   }
+
+  turboOn() {
+    console.log("turbo is on");
+  }
 }
+
+// let car1 = car1.turboOn();
+// console.log(car1.turboOn());
 
 /*
 The Principles of OOP
@@ -990,3 +999,87 @@ To setup the inheritance relation between classes in JavaScript, I can use the e
 
 
 */
+
+// Example
+let bird = {
+  hasWings: true,
+  canFly: true,
+  hasFeathers: true,
+};
+
+let eagle1 = Object.create(bird);
+console.log(eagle1.canFly);
+console.log(eagle1.hasWings);
+console.log(eagle1.hasFeathers);
+
+let eagle2 = Object.create(bird);
+console.log("eagles2 has wings:", eagle1.hasFeathers);
+
+let penguin1 = Object.create(bird);
+penguin1.canFly = false;
+
+console.log("Penguin can fly? :", penguin1);
+
+// Assignment
+
+// Task 1: Code a Person class
+class Person {
+  constructor(name = "Tom", age = 20, energy = 100) {
+    this.name = name;
+    this.age = age;
+    this.energy = energy;
+  }
+  sleep() {
+    this.energy += 10;
+  }
+  doSomethingFun() {
+    this.energy -= 10;
+  }
+}
+// Task 2: Code a Worker class
+class Worker extends Person {
+  constructor(name, age, energy, xp = 0, hourlyWage = 10) {
+    super(name, age, energy);
+    this.xp = xp;
+    this.hourlyWage = hourlyWage;
+  }
+  goToWork() {
+    this.xp += 10;
+  }
+}
+// Task 3: Code an intern object, run methods
+function intern() {
+  var intern = new Worker();
+  intern.name = "Bob";
+  intern.age = 21;
+  intern.energy = 110;
+  intern.xp = 0;
+  intern.hourlyWage = 10;
+  intern.goToWork();
+  return intern;
+}
+
+// Task 4: Code a manager object, methods
+function manager() {
+  var manager = new Worker();
+  manager.name = "Alice";
+  manager.age = 30;
+  manager.energy = 120;
+  manager.xp = 100;
+  manager.hourlyWage = 30;
+  manager.doSomethingFun();
+  return manager;
+}
+console.log(intern());
+console.log(manager());
+
+// Using Constructor Function
+
+function Human(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+const ismail = new Human("Ismail", "Adeshola");
+console.log(ismail.firstName);
+console.log(ismail.lastName);
