@@ -944,7 +944,7 @@ let purchase2 = {
   },
 };
 
-console.log(purchase2.totalPrice());
+// console.log(purchase2.totalPrice());
 
 // Classes in JavaScript
 // Syntax
@@ -1001,85 +1001,133 @@ To setup the inheritance relation between classes in JavaScript, I can use the e
 */
 
 // Example
-let bird = {
-  hasWings: true,
-  canFly: true,
-  hasFeathers: true,
+// let bird = {
+//   hasWings: true,
+//   canFly: true,
+//   hasFeathers: true,
+// };
+
+// let eagle1 = Object.create(bird);
+// console.log(eagle1.canFly);
+// console.log(eagle1.hasWings);
+// console.log(eagle1.hasFeathers);
+
+// let eagle2 = Object.create(bird);
+// console.log("eagles2 has wings:", eagle1.hasFeathers);
+
+// let penguin1 = Object.create(bird);
+// penguin1.canFly = false;
+
+// console.log("Penguin can fly? :", penguin1);
+
+// // Assignment
+
+// // Task 1: Code a Person class
+// class Person {
+//   constructor(name = "Tom", age = 20, energy = 100) {
+//     this.name = name;
+//     this.age = age;
+//     this.energy = energy;
+//   }
+//   sleep() {
+//     this.energy += 10;
+//   }
+//   doSomethingFun() {
+//     this.energy -= 10;
+//   }
+// }
+// // Task 2: Code a Worker class
+// class Worker extends Person {
+//   constructor(name, age, energy, xp = 0, hourlyWage = 10) {
+//     super(name, age, energy);
+//     this.xp = xp;
+//     this.hourlyWage = hourlyWage;
+//   }
+//   goToWork() {
+//     this.xp += 10;
+//   }
+// }
+// // Task 3: Code an intern object, run methods
+// function intern() {
+//   var intern = new Worker();
+//   intern.name = "Bob";
+//   intern.age = 21;
+//   intern.energy = 110;
+//   intern.xp = 0;
+//   intern.hourlyWage = 10;
+//   intern.goToWork();
+//   return intern;
+// }
+
+// // Task 4: Code a manager object, methods
+// function manager() {
+//   var manager = new Worker();
+//   manager.name = "Alice";
+//   manager.age = 30;
+//   manager.energy = 120;
+//   manager.xp = 100;
+//   manager.hourlyWage = 30;
+//   manager.doSomethingFun();
+//   return manager;
+// }
+// console.log(intern());
+// console.log(manager());
+
+// // Using Constructor Function
+
+// function Human(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+// }
+
+// const ismail = new Human("Ismail", "Adeshola");
+// console.log(ismail.firstName);
+// console.log(ismail.lastName);
+
+// De-structuring Arrays and Objects
+// console.log(PI);
+let { PI } = Math;
+// console.log(PI);
+
+// console.log(PI === Math.PI);
+// PI = 1;
+// console.log(PI === Math.PI);
+// console.log(PI);
+
+// For of loop
+// To begin, it's important to know that a for of loop cannot work on an object directly, since an object is not iterable. For example:
+
+const motor = {
+  speed: 100,
+  color: "blur",
 };
 
-let eagle1 = Object.create(bird);
-console.log(eagle1.canFly);
-console.log(eagle1.hasWings);
-console.log(eagle1.hasFeathers);
+// for (prop of motor) {
+//   console.log(prop);
+// }
 
-let eagle2 = Object.create(bird);
-console.log("eagles2 has wings:", eagle1.hasFeathers);
-
-let penguin1 = Object.create(bird);
-penguin1.canFly = false;
-
-console.log("Penguin can fly? :", penguin1);
-
-// Assignment
-
-// Task 1: Code a Person class
-class Person {
-  constructor(name = "Tom", age = 20, energy = 100) {
-    this.name = name;
-    this.age = age;
-    this.energy = energy;
-  }
-  sleep() {
-    this.energy += 10;
-  }
-  doSomethingFun() {
-    this.energy -= 10;
-  }
-}
-// Task 2: Code a Worker class
-class Worker extends Person {
-  constructor(name, age, energy, xp = 0, hourlyWage = 10) {
-    super(name, age, energy);
-    this.xp = xp;
-    this.hourlyWage = hourlyWage;
-  }
-  goToWork() {
-    this.xp += 10;
-  }
-}
-// Task 3: Code an intern object, run methods
-function intern() {
-  var intern = new Worker();
-  intern.name = "Bob";
-  intern.age = 21;
-  intern.energy = 110;
-  intern.xp = 0;
-  intern.hourlyWage = 10;
-  intern.goToWork();
-  return intern;
+// Arrays are iterable
+const colors = ["red", "orange", "yellow"];
+for (let color of colors) {
+  console.log(color);
 }
 
-// Task 4: Code a manager object, methods
-function manager() {
-  var manager = new Worker();
-  manager.name = "Alice";
-  manager.age = 30;
-  manager.energy = 120;
-  manager.xp = 100;
-  manager.hourlyWage = 30;
-  manager.doSomethingFun();
-  return manager;
+/*
+ Luckily, you can use the fact that a for of loop can be run on arrays to loop over objects.
+
+But how?
+
+Before you can properly answer this question, you first need to review three built-in methods: 
+1. Object.keys(), 
+2. Object.values(), and 
+3. Object.entries().
+ */
+
+// The Object.keys() method
+/*
+The Object.keys() method receives an object as its parameter. Remember, this object is the object you want to loop over. It's still too early to explain how you'll loop over the object itself; for now, 
+focus on the returned array of properties when you call the Object.keys() method.
+ */
+const motor2 = {
+  speed:
 }
-console.log(intern());
-console.log(manager());
-
-// Using Constructor Function
-
-function Human(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-}
-
-const ismail = new Human("Ismail", "Adeshola");
-console.log(ismail.firstName);
-console.log(ismail.lastName);
