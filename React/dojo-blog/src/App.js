@@ -1,17 +1,19 @@
-
-import './App.css';
+import Navbar from './Navbar';
+import Home from "./Home"
 
 function App() {
-  const title = "Welcome to the new blog";
-  const likes = "15";
-  const person = {name: "Ismail", age: 30}
+  // const title = "Welcome to the new blog";
+  // const likes = "15";
+  // const person = {name: "Ismail", age: 30}
   return (
     <div className="App">
+       <Navbar />
       <div className="content">
-        <h1>{title}</h1>
-        <p>Liked {likes} times</p>
-        <p>{person.name}</p>
+        <Home />
+        {/* <p>Liked {likes} times</p> */}
+        {/* <p>{person.name}</p> */}
       </div>
+     
     </div>
   );
 }
