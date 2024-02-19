@@ -1,30 +1,28 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import BlockList from "./BlogList";
 
 const Home = () => {
-    // let name = "Ismail"
-    const [name, setName] = useState("Ismail");
-    const [age, setAge] = useState(0)
+ const [blogs, setBlogs] = useState([
+    { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
+    { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
+    { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
+ ])
 
-    const handleClick = (e) => {
-        // console.log("hello, Ninjas")  
-        setName("Aisha");
-        setAge(age + 1);
-        
-      } 
+ const handleDelete = (id) => {
+   const newBlogs = blogs.filter(blog => blog.id !== id);
+   setBlogs(newBlogs);
+ }
 
-    // const handleClickAgain = (name) => {
-    //     console.log(`Hello ${name} `)
-    // }
+ useEffect(() => {
+   console.log("use effect ran");
+   console.log(blogs)
+ });
+
   
     return ( 
-        <div>
-            <h2>Home Page</h2>
-            <button onClick={handleClick}>Click me</button>
-            {/* <button onClick={() =>
-                handleClickAgain("Ismail")
-            }>Click me</button> */}
-
-            <p>{name} will be {age} by November 17 {2023 + 1}</p>
+        <div className="home">
+           <BlockList blogs={blogs} title="All blogs" handleDelete={handleDelete}/>
+          
         </div>
      );
 }
